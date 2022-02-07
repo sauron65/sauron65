@@ -30,7 +30,24 @@ Always use ESM (set `"type": "module"` in `package.json`). Avoid using default e
 
 imports and exports like this:
 ```js
-//module.js
+// module.js
 
+// export at declaration
 export let y = 8;
+const x = 418;
+const z = 32;
+
+// or at end of file
+export { x, z };
+
+// main.js
+
+import { x, y, z } from "./module.js";
+
+// when importing node.js builtin modules,
+// prefer:
+import * as path from "path";
+
+// over:
+import path from "path";
 ```
