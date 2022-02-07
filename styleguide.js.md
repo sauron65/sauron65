@@ -48,6 +48,10 @@ import { x, y, z } from "./module.js";
 // prefer:
 import * as path from "path";
 
+// or
+
+import { dirname } from "path";
+
 // over:
 import path from "path";
 ```
